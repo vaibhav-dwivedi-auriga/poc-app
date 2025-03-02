@@ -37,10 +37,8 @@ export default function BookDetails({book}) {
 }
 
 const client = createClient({
-  space: "gv5pseuzor2o",
-  accessToken: "LkE9tQNu1xBOF8EMIJ-Va282aTVcxzLe6LmJV670VWY"
-  // space:process.env.CONTENTFUL_SPACE_ID,
-  // accessToken:process.env.CONTENTFUL_ACCESS_KEY
+  space:`${process.env.CONTENTFUL_SPACE_ID}`,
+    accessToken:`${process.env.CONTENTFUL_ACCESS_KEY}`
 
 });
 
@@ -51,7 +49,8 @@ export async function getStaticProps({params}) {
   return {
     props:{
       book:items
-    }
+    },
+    revalidate:3
   }
 
 }

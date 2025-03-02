@@ -31,6 +31,7 @@ export async function getStaticProps () {
   return {
     props:{
       books:response.items
-    }
+    },
+    revalidate:3
   }
 }
