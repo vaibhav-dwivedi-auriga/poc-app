@@ -46,6 +46,15 @@ export async function getStaticProps({params}) {
   // console.log(params.slug);
   const slug = params.slug
   const {items} = await client.getEntries({content_type:'book','fields.slug':`${slug}`})
+  
+  if (!items.length){
+    return {
+      redirect:{
+        destination:'/',
+        permanent:false
+      }
+    }
+  }
   return {
     props:{
       book:items
