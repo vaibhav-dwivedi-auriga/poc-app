@@ -1,0 +1,534 @@
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  h2,
+  h3,
+  a {
+    color: #34495e;
+  }
+
+  h4{
+    color: #34495e;
+    font-weight: 500;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .logo {
+    margin: 0;
+    font-size: 1.45em;
+  }
+  
+  .main-nav {
+    display: flex;
+    margin-top: 5px;
+  }
+  
+  .logo a,
+  .main-nav a {
+    padding: 10px 15px;
+    /* text-transform: uppercase; */
+    text-align: center;
+    display: block;
+  }
+  
+  .main-nav a {
+    color: #34495e;
+    font-size: 0.99em;
+  }
+  
+  .main-nav a:hover {
+    color: #718daa;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    background-color: #f4f4f4;
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  }
+  
+  .loading {
+    opacity: 0;
+    transition: all 0.2s ease-in;
+  }
+  
+  .loaded {
+    opacity: 1;
+    transition: all 0.2s ease-in;
+  }
+
+  .ips-section {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+
+  /* .benefits-banner {
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 385px;
+    max-height: 150px;
+    margin: 10px 10px;
+    padding: 60px 60px;
+    background-color: rgba(224, 99, 54, 0.6);
+  }
+  
+  .benefit-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    border-radius: 15px;
+    background-color: #f4f4f4;
+    padding: 12px 16px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .benefit-card:hover {
+    transform: scale(1.02);
+    box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .benefit-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 85%;
+  }
+  
+  .benefit-description {
+    display: none;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .benefit-expanded {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 8px;
+  }
+  
+  .benefit-expanded .benefit-description {
+    display: block;
+  }
+  
+  .benefit-card.active {
+    background-color: #f9f9f9;
+  }
+  
+  .benefit-card.active .benefit-title {
+    color: #e06a2e;
+  }
+  
+  .benefit-expanded .benefit-title {
+    font-size: 18px;
+    color: #222;
+    font-weight: bold;
+  } */
+
+/* 
+>>>>>>>>>>>>>.master
+
+
+  .benefits-banner {
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 385px;
+    max-height: 150px;
+    margin: 10px 10px;
+    padding: 60px 60px;
+    background-color: rgba(224, 99, 54, 0.6);
+    overflow: hidden;
+  }
+  
+  .benefit-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    background-color: #f4f4f4;
+    padding: 12px 16px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    cursor: pointer;
+    width: 100%;
+    max-width: 100%; 
+    box-sizing: border-box;
+  }
+  
+  .benefit-card:hover {
+    transform: scale(1.02);
+    box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .benefit-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 85%;
+  }
+  
+  .benefit-description {
+    display: none;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .benefit-expanded {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 8px;
+    overflow-y: auto;
+    max-height: calc(100% - 68px); 
+  }
+  
+  .benefit-expanded .benefit-description {
+    display: block;
+  }
+  
+  .benefit-card.active {
+    background-color: #f9f9f9;
+  }
+  
+  .benefit-card.active .benefit-title {
+    color: #e06a2e;
+  }
+  
+  .benefit-expanded .benefit-title {
+    font-size: 18px;
+    color: #222;
+    font-weight: bold;
+  }
+   */
+
+/* .benefits-banner {
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 385px;
+    max-height: 150px;
+    margin: 10px 10px;
+    padding: 60px 60px;
+    background-color: rgba(224, 99, 54, 0.6);
+  }
+
+  .benefits-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    background-color: #f4f4f4;
+    padding: 12px 16px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px;
+}
+
+.benefits-card:hover {
+    transform: scale(1.02);
+    box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.benefit-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 85%;
+}
+
+.benefit-description {
+    display: none;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.benefits-card.active .benefit-description {
+    display: block;
+} */
+
+
+
+
+
+
+
+
+/* 
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 15px;
+  }
+
+  .field-input {
+    display: flex;
+    font-size: medium;
+    margin: 10px 0px;
+  }
+
+  .field-input > label {
+    padding: 5px 10px;
+  }
+
+  .form-group > label {
+    font-size: medium;
+  } */
+
+
+  .form-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.field-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: medium;
+    margin-top: 5px;
+}
+
+.field-input input,
+.field-input select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.field-input input:focus,
+.field-input select:focus {
+    border-color: #007bff;
+}
+
+.field-input > label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: #007bff;
+    transform: scale(1.2);
+}
+
+.dropdown-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+.dropdown-group .form-group {
+  flex: 1;
+  min-width: 45%;
+}
+
+.dropdown-group .field-input select {
+  width: 100%;
+}
+
+select {
+    appearance: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+
+  .benefit-calculator {
+    width: 25%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .benefits-banner {
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 500px;
+    max-height: 200px;
+    margin: 10px 10px;
+    padding: 60px 60px;
+    background-color: rgba(224, 99, 54, 0.6);
+    overflow: hidden;
+  }
+
+  .benefit-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 15px;
+    background-color: #f4f4f4;
+    padding: 12px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    cursor: pointer;
+    width: 100%;
+    height: 80px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  .benefit-card:hover {
+    transform: scale(1.02);
+    box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .benefit-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+
+  .benefit-expanded .benefit-description {
+    display: block;
+  }
+  
+  .benefit-card.active {
+    background-color: #f9f9f9;
+  }
+  
+  .benefit-card.active .benefit-title {
+    color: #e06a2e;
+  }
+
+  .benefit-expanded {
+    font-size: small;
+    width: 453px;
+    /* height: 100%; */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .benefit-expanded .benefit-title {
+    font-size: 18px;
+    color: #222;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
+  
+  .benefit-description {
+    width: 100%;
+    /* Remove fixed height */
+    padding: 10px;
+    /* Remove white-space: nowrap */
+    overflow-y: auto; /* Allow vertical scrolling */
+    text-overflow: ellipsis;
+    box-sizing: border-box; /* Add box-sizing */
+    text-align: left; /* Align text to the left */
+}
