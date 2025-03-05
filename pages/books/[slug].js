@@ -1,5 +1,7 @@
 import { createClient } from "contentful";
 import Image from "next/image";
+import { Shopstory } from "@shopstory/react";
+import { createShopstoryConfig } from "../../lib/shopstoryConfig";
 
 export default function BookDetails({book}) {
   console.log(book);
@@ -32,6 +34,9 @@ export default function BookDetails({book}) {
             </p>
           </div>
       </div>
+      <div>
+        <Shopstory content={book?.fields?.shopstoryContent} />
+      </div>
   </div>
   )
 }
@@ -43,10 +48,9 @@ const client = createClient({
 });
 
 export async function getStaticProps({params}) {
-  // console.log(params.slug);
   const slug = params.slug
   const {items} = await client.getEntries({content_type:'book','fields.slug':`${slug}`})
-  
+
   if (!items.length){
     return {
       redirect:{
@@ -57,7 +61,8 @@ export async function getStaticProps({params}) {
   }
   return {
     props:{
-      book:items
+      book:items,
+      shopstoryMeta: createShopstoryConfig().meta || null,
     },
     revalidate:3
   }

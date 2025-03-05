@@ -5,7 +5,7 @@ export default function Layout({ children }) {
     <div className="layout">
       <header>
         <Link href="/" passHref>
-            <h1>
+            <h1 className='books-nav'>
               <span>Just Join</span>
               <span>the Sci-Fi Space</span>
             </h1>
