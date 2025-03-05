@@ -24,6 +24,7 @@ export default function TermInsuranceCalculator({ formConfig = {} }) {
   let isConfigFetched = false;
   if (formConfig) {
     isConfigFetched = formConfig.length > 0 ? true : false;
+    formConfig = formConfig[0];
   }
   return (
     <>
