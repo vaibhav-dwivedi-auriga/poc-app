@@ -4,7 +4,6 @@ import { Shopstory } from "@shopstory/react";
 import { createShopstoryConfig } from "../../lib/shopstoryConfig";
 
 export default function BookDetails({book}) {
-  console.log(book);
   const {title, author, overview, slug, thumbnail} = book[0].fields;
   const about_book = overview.content[0].content.reduce((acc,ele)=>{  
     return acc+ele.value;
@@ -35,7 +34,7 @@ export default function BookDetails({book}) {
           </div>
       </div>
       <div>
-        <Shopstory content={book?.fields?.shopstoryContent} />
+        {/* <Shopstory content={book?.fields?.shopstoryContent} /> */}
       </div>
   </div>
   )
@@ -62,7 +61,7 @@ export async function getStaticProps({params}) {
   return {
     props:{
       book:items,
-      shopstoryMeta: createShopstoryConfig().meta || null,
+      // shopstoryMeta: createShopstoryConfig().meta || null,
     },
     revalidate:3
   }

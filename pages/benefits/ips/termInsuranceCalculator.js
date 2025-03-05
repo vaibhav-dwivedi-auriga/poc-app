@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function TermInsuranceCalculator({ formConfig }) {
+export default function TermInsuranceCalculator({ formConfig = {} }) {
   const [formData, setFormData] = useState({});
   const [selectedOption, setSelectedOption] = useState({});
 
@@ -21,10 +21,13 @@ export default function TermInsuranceCalculator({ formConfig }) {
     console.log(formData);
   };
 
-  formConfig = formConfig[0];
-
+  let isConfigFetched = false;
+  if (formConfig) {
+    isConfigFetched = formConfig.length > 0 ? true : false;
+  }
   return (
     <>
+      {isConfigFetched ? (
       <form onSubmit={handleSubmit} className="form-container">
         <h3>{formConfig?.fields?.configName}</h3>
 
@@ -99,7 +102,7 @@ export default function TermInsuranceCalculator({ formConfig }) {
           ))}
 
         {/* Conditional Fields */}
-        {Object.entries(formConfig?.fields?.config?.conditionalFields).map(
+        {formConfig?.fields?.config?.conditionalFields && Object.entries(formConfig?.fields?.config?.conditionalFields).map(
           ([key, fields]) => {
             if (
               selectedOption["residentStatus"] === key ||
@@ -136,6 +139,8 @@ export default function TermInsuranceCalculator({ formConfig }) {
           <button type="submit">Submit</button>
         </div>
       </form>
+      ) : null
+      }
     </>
   );
 }
